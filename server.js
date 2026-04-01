@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect('mongodb://localhost:27017/jowogamestore')
-  .then(() => console.log('Connected to MongoDB!!'))
+  .then(() => console.log('Connected to MongoDB!! 💾'))
   .catch(err => console.log('Connection error:', err));
 
 const orderSchema = new mongoose.Schema({
@@ -23,7 +23,7 @@ const orderSchema = new mongoose.Schema({
 const Order = mongoose.model('Order', orderSchema);
 
 app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to JOWO GAMESTORE API!!', status: 'Server is running!!' });
+  res.json({ message: 'Welcome to JOWO GAMESTORE API!! 🎮', status: 'Server is running!!' });
 });
 
 app.get('/games', (req, res) => {
